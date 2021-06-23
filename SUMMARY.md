@@ -1,137 +1,73 @@
+# Table of contents
+
 * [《深入浅出JVM字节码》](README.md)
+* [序言](xu-yan.md)
+* [第一章 认识Java虚拟机栈](di-yi-zhang-ren-shi-java-xu-ni-ji-zhan/README.md)
+  * [你遇到过StackOverflowError吗？](di-yi-zhang-ren-shi-java-xu-ni-ji-zhan/ni-yu-dao-guo-stackoverflowerror-ma.md)
+  * [JVM运行时内存结构](di-yi-zhang-ren-shi-java-xu-ni-ji-zhan/jvm-yun-hang-shi-nei-cun-jie-gou.md)
+  * [线程、栈与栈桢](di-yi-zhang-ren-shi-java-xu-ni-ji-zhan/xian-cheng-zhan-yu-zhan-zhen.md)
+  * [局部变量表与操作数栈](di-yi-zhang-ren-shi-java-xu-ni-ji-zhan/ju-bu-bian-liang-biao-yu-cao-zuo-shu-zhan.md)
+  * [基于栈的指令集架构](di-yi-zhang-ren-shi-java-xu-ni-ji-zhan/ji-yu-zhan-de-zhi-ling-ji-jia-gou.md)
+  * [本章小结](di-yi-zhang-ren-shi-java-xu-ni-ji-zhan/ben-zhang-xiao-jie.md)
+* [第二章 认识Class文件结构](di-er-zhang-ren-shi-class-wen-jian-jie-gou/README.md)
+  * [项目框架搭建](di-er-zhang-ren-shi-class-wen-jian-jie-gou/xiang-mu-kuang-jia-da-jian.md)
+  * [解析魔数](di-er-zhang-ren-shi-class-wen-jian-jie-gou/jie-xi-mo-shu.md)
+  * [解析版本号](di-er-zhang-ren-shi-class-wen-jian-jie-gou/jie-xi-ban-ben-hao.md)
+  * [解析常量池](di-er-zhang-ren-shi-class-wen-jian-jie-gou/jie-xi-chang-liang-chi.md)
+  * [解析class文件的访问标志](di-er-zhang-ren-shi-class-wen-jian-jie-gou/jie-xi-class-wen-jian-de-fang-wen-biao-zhi.md)
+  * [解析this与super](di-er-zhang-ren-shi-class-wen-jian-jie-gou/jie-xi-this-yu-super.md)
+  * [解析实现的接口](di-er-zhang-ren-shi-class-wen-jian-jie-gou/jie-xi-shi-xian-de-jie-kou.md)
+  * [解析字段表](di-er-zhang-ren-shi-class-wen-jian-jie-gou/jie-xi-zi-duan-biao.md)
+  * [解析方法表](di-er-zhang-ren-shi-class-wen-jian-jie-gou/jie-xi-fang-fa-biao.md)
+  * [解析class文件的属性表](di-er-zhang-ren-shi-class-wen-jian-jie-gou/jie-xi-class-wen-jian-de-shu-xing-biao.md)
+  * [解析整个Class文件结构](di-er-zhang-ren-shi-class-wen-jian-jie-gou/jie-xi-zheng-ge-class-wen-jian-jie-gou.md)
+  * [属性二次解析](di-er-zhang-ren-shi-class-wen-jian-jie-gou/shu-xing-er-ci-jie-xi.md)
+  * [本章小结](di-er-zhang-ren-shi-class-wen-jian-jie-gou/ben-zhang-xiao-jie.md)
+* [第三章 认识字节码指令](di-san-zhang-ren-shi-zi-jie-ma-zhi-ling/README.md)
+  * [从Hello Word出发](di-san-zhang-ren-shi-zi-jie-ma-zhi-ling/cong-hello-word-chu-fa.md)
+  * [字段与方法描述符](di-san-zhang-ren-shi-zi-jie-ma-zhi-ling/zi-duan-yu-fang-fa-miao-shu-fu.md)
+  * [读写局部变量表与操作数栈](di-san-zhang-ren-shi-zi-jie-ma-zhi-ling/du-xie-ju-bu-bian-liang-biao-yu-cao-zuo-shu-zhan.md)
+  * [基于对象的操作](di-san-zhang-ren-shi-zi-jie-ma-zhi-ling/ji-yu-dui-xiang-de-cao-zuo.md)
+  * [访问静态字段与静态方法](di-san-zhang-ren-shi-zi-jie-ma-zhi-ling/fang-wen-jing-tai-zi-duan-yu-jing-tai-fang-fa.md)
+  * [调用方法的四条指令](di-san-zhang-ren-shi-zi-jie-ma-zhi-ling/tiao-yong-fang-fa-de-si-tiao-zhi-ling.md)
+  * [不同类型返回值对应的指令](di-san-zhang-ren-shi-zi-jie-ma-zhi-ling/bu-tong-lei-xing-fan-hui-zhi-dui-ying-de-zhi-ling.md)
+  * [创建数组与访问数组元素](di-san-zhang-ren-shi-zi-jie-ma-zhi-ling/chuang-jian-shu-zu-yu-fang-wen-shu-zu-yuan-su.md)
+  * [条件分支语句的实现](di-san-zhang-ren-shi-zi-jie-ma-zhi-ling/tiao-jian-fen-zhi-yu-ju-de-shi-xian.md)
+  * [循环语句的实现](di-san-zhang-ren-shi-zi-jie-ma-zhi-ling/xun-huan-yu-ju-de-shi-xian.md)
+  * [异常处理的实现](di-san-zhang-ren-shi-zi-jie-ma-zhi-ling/yi-chang-chu-li-de-shi-xian.md)
+  * [本章小结](di-san-zhang-ren-shi-zi-jie-ma-zhi-ling/ben-zhang-xiao-jie.md)
+* [第四章 了解类加载器](di-si-zhang-le-jie-lei-jia-zai-qi/README.md)
+  * [动态加载类的两种方式](di-si-zhang-le-jie-lei-jia-zai-qi/dong-tai-jia-zai-lei-de-liang-zhong-fang-shi.md)
+  * [类加载过程](di-si-zhang-le-jie-lei-jia-zai-qi/lei-jia-zai-guo-cheng.md)
+  * [双亲委派模型](di-si-zhang-le-jie-lei-jia-zai-qi/shuang-qin-wei-pai-mo-xing.md)
+  * [自定义类加载器加载字节码](di-si-zhang-le-jie-lei-jia-zai-qi/zi-ding-yi-lei-jia-zai-qi-jia-zai-zi-jie-ma.md)
+  * [本章小结](di-si-zhang-le-jie-lei-jia-zai-qi/ben-zhang-xiao-jie.md)
+* [第五章 使用ASM操作字节码](di-wu-zhang-shi-yong-asm-cao-zuo-zi-jie-ma/README.md)
+  * [框架简介](di-wu-zhang-shi-yong-asm-cao-zuo-zi-jie-ma/kuang-jia-jian-jie.md)
+  * [访问者模式在ASM框架中的应用](di-wu-zhang-shi-yong-asm-cao-zuo-zi-jie-ma/fang-wen-zhe-mo-shi-zai-asm-kuang-jia-zhong-de-ying-yong.md)
+  * [在项目中使用ASM](di-wu-zhang-shi-yong-asm-cao-zuo-zi-jie-ma/zai-xiang-mu-zhong-shi-yong-asm.md)
+  * [创建类并创建方法](di-wu-zhang-shi-yong-asm-cao-zuo-zi-jie-ma/chuang-jian-lei-bing-chuang-jian-fang-fa.md)
+  * [给类添加字段](di-wu-zhang-shi-yong-asm-cao-zuo-zi-jie-ma/gei-lei-tian-jia-zi-duan.md)
+  * [改写类并改写方法](di-wu-zhang-shi-yong-asm-cao-zuo-zi-jie-ma/gai-xie-lei-bing-gai-xie-fang-fa.md)
+  * [创建类并实现接口](di-wu-zhang-shi-yong-asm-cao-zuo-zi-jie-ma/chuang-jian-lei-bing-shi-xian-jie-kou.md)
+  * [继承类并重写父类方法](di-wu-zhang-shi-yong-asm-cao-zuo-zi-jie-ma/ji-cheng-lei-bing-zhong-xie-fu-lei-fang-fa.md)
+  * [本章小结](di-wu-zhang-shi-yong-asm-cao-zuo-zi-jie-ma/ben-zhang-xiao-jie.md)
+* [第六章 实战一：JDK与Cglib动态代理](di-liu-zhang-shi-zhan-yi-jdk-yu-cglib-dong-tai-dai-li/README.md)
+  * [JDK动态代理实现原理分析](di-liu-zhang-shi-zhan-yi-jdk-yu-cglib-dong-tai-dai-li/jdk-dong-tai-dai-li-shi-xian-yuan-li-fen-xi.md)
+  * [动手实现JDK动态代理](di-liu-zhang-shi-zhan-yi-jdk-yu-cglib-dong-tai-dai-li/dong-shou-shi-xian-jdk-dong-tai-dai-li.md)
+  * [Cglib动态代理实现原理分析](di-liu-zhang-shi-zhan-yi-jdk-yu-cglib-dong-tai-dai-li/cglib-dong-tai-dai-li-shi-xian-yuan-li-fen-xi.md)
+  * [动手实现Cglib动态代理](di-liu-zhang-shi-zhan-yi-jdk-yu-cglib-dong-tai-dai-li/dong-shou-shi-xian-cglib-dong-tai-dai-li.md)
+  * [本章小结](di-liu-zhang-shi-zhan-yi-jdk-yu-cglib-dong-tai-dai-li/ben-zhang-xiao-jie.md)
+* [第七章 实战二：APM数据采集之探针埋点](di-qi-zhang-shi-zhan-er-apm-shu-ju-cai-ji-zhi-tan-zhen-mai-dian/README.md)
+  * [Instrumentation简介](di-qi-zhang-shi-zhan-er-apm-shu-ju-cai-ji-zhi-tan-zhen-mai-dian/instrumentation-jian-jie.md)
+  * [编写Java Agent插件](di-qi-zhang-shi-zhan-er-apm-shu-ju-cai-ji-zhi-tan-zhen-mai-dian/bian-xie-java-agent-cha-jian.md)
+  * [在类加载之前修改类的字节码](di-qi-zhang-shi-zhan-er-apm-shu-ju-cai-ji-zhi-tan-zhen-mai-dian/zai-lei-jia-zai-zhi-qian-xiu-gai-lei-de-zi-jie-ma.md)
+  * [使用ASM为方法插入埋点](di-qi-zhang-shi-zhan-er-apm-shu-ju-cai-ji-zhi-tan-zhen-mai-dian/shi-yong-asm-wei-fang-fa-cha-ru-mai-dian.md)
+  * [在类加载之后修改类的字节码](di-qi-zhang-shi-zhan-er-apm-shu-ju-cai-ji-zhi-tan-zhen-mai-dian/zai-lei-jia-zai-zhi-hou-xiu-gai-lei-de-zi-jie-ma.md)
+  * [本章小结](di-qi-zhang-shi-zhan-er-apm-shu-ju-cai-ji-zhi-tan-zhen-mai-dian/ben-zhang-xiao-jie.md)
+* [第八章 进阶篇](di-ba-zhang-jin-jie-pian/README.md)
+  * [深入理解类型检查与栈映射桢](di-ba-zhang-jin-jie-pian/shen-ru-li-jie-lei-xing-jian-cha-yu-zhan-ying-she-zhen.md)
+  * [深入理解泛型与泛型方法调用](di-ba-zhang-jin-jie-pian/shen-ru-li-jie-fan-xing-yu-fan-xing-fang-fa-tiao-yong.md)
+  * [期待更多...](di-ba-zhang-jin-jie-pian/qi-dai-geng-duo-....md)
+* [期待更多...](qi-dai-geng-duo-....md)
 
-* [序言](序言.md)
-
-* [第一章 认识Java虚拟机栈](chapter01/README.MD)
-  * [你遇到过StackOverflowError吗？](chapter01/你遇到过StackOverflowError吗？.MD)
-
-  * [JVM运行时内存结构](chapter01/JVM运行时内存结构.MD)
-
-  * [线程、栈与栈桢](chapter01/线程、栈与栈桢.MD)
-
-  * [局部变量表与操作数栈](chapter01/局部变量表与操作数栈.MD)
-
-  * [基于栈的指令集架构](chapter01/基于栈的指令集架构.MD)
-
-  * [本章小结](chapter01/本章小结.MD)
-
-* [第二章 认识Class文件结构](chapter02/README.MD)
-
-  * [项目框架搭建](chapter02/项目框架搭建.MD)
-
-  * [解析魔数](chapter02/解析魔数.MD)
-
-  * [解析版本号](chapter02/解析版本号.MD)
-
-  * [解析常量池](chapter02/解析常量池.MD)
-
-  * [解析class文件的访问标志](chapter02/解析class文件的访问标志.MD)
-
-  * [解析this与super](chapter02/解析this与super.MD)
-
-  * [解析实现的接口](chapter02/解析实现的接口.MD)
-
-  * [解析字段表](chapter02/解析字段表.MD)
-
-  * [解析方法表](chapter02/解析方法表.MD)
-
-  * [解析class文件的属性表](chapter02/解析class文件的属性表.MD)
-
-  * [解析整个Class文件结构](chapter02/解析整个Class文件结构.MD)
-  
-  * [属性二次解析](chapter02/属性二次解析.MD)
-
-  * [本章小结](chapter02/本章小结.MD)
-
-* [第三章 认识字节码指令](chapter03/README.MD)
-
-  * [从Hello Word出发](chapter03/从HelloWord出发.MD)
-
-  * [字段与方法描述符](chapter03/字段与方法描述符.MD)
-
-  * [读写局部变量表与操作数栈](chapter03/读写局部变量表与操作数栈.MD)
-
-  * [基于对象的操作](chapter03/基于对象的操作.MD)
-
-  * [访问静态字段与静态方法](chapter03/访问静态字段与静态方法.MD)
-
-  * [调用方法的四条指令](chapter03/调用方法的四条指令.MD)
-
-  * [不同类型返回值对应的指令](chapter03/不同类型返回值对应的指令.MD)
-
-  * [创建数组与访问数组元素](chapter03/创建数组与访问数组元素.MD)
-
-  * [条件分支语句的实现](chapter03/条件分支语句的实现.MD)
-
-  * [循环语句的实现](chapter03/循环语句的实现.MD)
-
-  * [异常处理的实现](chapter03/异常处理的实现.MD)
-
-  * [本章小结](chapter03/本章小结.MD)
-
-* [第四章 了解类加载器](chapter04/README.MD)
-
-  * [动态加载类的两种方式](chapter04/动态加载类的两种方式.MD)
-
-  * [类加载过程](chapter04/类加载过程.MD)
-
-  * [双亲委派模型](chapter04/双亲委派模型.MD)
-
-  * [自定义类加载器加载字节码](chapter04/自定义类加载器加载字节码.MD)
-
-  * [本章小结](chapter04/本章小结.MD)
-
-* [第五章 使用ASM操作字节码](chapter05/README.MD)
-
-  * [框架简介](chapter05/框架简介.MD)
-
-  * [访问者模式在ASM框架中的应用](chapter05/访问者模式在ASM框架中的应用.MD)
-
-  * [在项目中使用ASM](chapter05/在项目中使用ASM.MD)
-
-  * [创建类并创建方法](chapter05/创建类并创建方法.MD)
-
-  * [给类添加字段](chapter05/给类添加字段.MD)
-
-  * [改写类并改写方法](chapter05/改写类并改写方法.MD)
-
-  * [创建类并实现接口](chapter05/创建类并实现接口.MD)
-
-  * [继承类并重写父类方法](chapter05/继承类并重写父类方法.MD)
-
-  * [本章小结](chapter05/本章小结.MD)
-
-* [第六章 实战一：JDK与Cglib动态代理](chapter06/README.MD)
-
-  * [JDK动态代理实现原理分析](chapter06/JDK动态代理实现原理分析.MD)
-
-  * [动手实现JDK动态代理](chapter06/动手实现JDK动态代理.MD)
-
-  * [Cglib动态代理实现原理分析](chapter06/Cglib动态代理实现原理分析.MD)
-
-  * [动手实现Cglib动态代理](chapter06/动手实现Cglib动态代理.MD)
-
-  * [本章小结](chapter06/本章小结.MD)
-
-* [第七章 实战二：APM数据采集之探针埋点](chapter07/README.MD)
-
-  * [Instrumentation简介](chapter07/Instrumentation简介.MD)
-
-  * [编写Java Agent插件](chapter07/编写JavaAgent插件.MD)
-
-  * [在类加载之前修改类的字节码](chapter07/在类加载之前修改类的字节码.MD)
-
-  * [使用ASM为方法插入埋点](chapter07/使用ASM为方法插入埋点.MD)
-
-  * [在类加载之后修改类的字节码](chapter07/在类加载之后修改类的字节码.MD)
-
-  * [本章小结](chapter07/本章小结.MD)
-
-* [第八章 进阶篇](chapter08/README.MD)
-
-  * [深入理解类型检查与栈映射桢](chapter08/深入理解类型检查与栈映射桢.MD)
-
-  * [深入理解泛型与泛型方法调用](chapter08/深入理解泛型与泛型方法调用.MD)
-
-  * [期待更多...]()
-* [期待更多...]()
