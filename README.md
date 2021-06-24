@@ -19,7 +19,7 @@
 
 ### 扫码关注微信公众号
 
-![&#x516C;&#x4F17;&#x53F7;&#x4E8C;&#x7EF4;&#x7801;](.gitbook/assets/qrcode_for_gh_90734181ca48_258.jpg)
+![扫码关注Java艺术公众号](qrcode/qrcode_for_gh_90734181ca48_258.jpg)
 
 ## 持续更新中
 
@@ -40,5 +40,5 @@
 
 为了方便交流，您可以加入笔者创建的公众号交流群，由于群邀请二维码会过期，因此您可以添加我微信备注“《深入浅出JVM字节码》”，我拉您入群。
 
-![&#x5FAE;&#x4FE1;&#x4E8C;&#x7EF4;&#x7801;](.gitbook/assets/wujiuye_wx_qrcode.jpeg)
+![扫码添加作者好友](qrcode/wujiuye_wx_qrcode.jpeg)
 

@@ -1,6 +1,0 @@
-{
-    "plugins": [
-	"-search",
-        "pageview-count"
-    ]
-}
