@@ -38,14 +38,12 @@
 
 第八章：补充一些知识点，如类型检查与栈映射桢、泛型以及泛型方法的调用。
 
-本书Class文件结构参考《Java虚拟机规范》Java SE 8版[1]。
+本书Class文件结构参考《Java虚拟机规范》Java SE 8版[^1]。
 
 ## 源码下载
 * OpenJDK Github源码下载地址: [OpenJDK下载（不同版本对应不同分支）](https://github.com/unofficial-openjdk/openjdk/tree/jdk8u/jdk8u)
 * 本书中的案例代码下载地址：[https://github.com/wujiuye/bytecode-book](https://github.com/wujiuye/bytecode-book)
 
-## 脚注引用
-
-* [1]《Java虚拟机规范》是Java领域最重要和最权威的著作之一，Java SE 8版完整且详细的讲解基于Java SE 8的Java虚拟机规范。
+[^ 1]:《Java虚拟机规范》是Java领域最重要和最权威的著作之一，Java SE 8版完整且详细的讲解基于Java SE 8的Java虚拟机规范。
 
 ![Java艺术](qrcode/javaskill_qrcode_02.png)
