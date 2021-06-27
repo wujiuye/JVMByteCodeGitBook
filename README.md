@@ -6,6 +6,12 @@
 
 本书《深入浅出JVM字节码》是[《Java虚拟机字节码从入门到实战》](https://www.amazon.com/Chinese-%E5%90%B4%E5%B0%B1%E4%B8%9A-ebook/dp/B08G8KYVFJ)的第二版，并更名为《深入浅出JVM字节码》。
 
+* 国内站点链接：http://jvmbytecode.wujiuye.cn/
+
+* Github链接：https://wujiuye.github.io/JVMByteCodeGitBook/
+
+* GitBook链接：https://wujiuye.gitbook.io/jvmbytecode
+
 ## 为什么选择开源
 
 开源，是为了更好！
