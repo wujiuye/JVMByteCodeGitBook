@@ -25,6 +25,13 @@
 
 由于需要人工将Word文档一章一章的转换为Markdown文档，在此过程中作者也会修改内容，需要花费很多时间，因此暂定每周六晚10点更新一章。
 
+笔者开源的一些字节码实战案例：
+
+* [实现类Spring框架@Async注解功能的asyncframework](opensourceprojects/asyncframework.md)
+* [一款轻量级的分布式调用链路追踪Java探针vine](opensourceprojects/vine.md)
+* [运行时解析json生成class的json-class-generator](opensourceprojects/jcg.md)
+* [JavaAgent入门级项目Beemite](opensourceprojects/beemite.md)
+
 ## 如何贡献
 
 可将您的修改提交到自己的分支，并提交合并master分支请求，我会审核您的提交，只要内容没有错误观点且语句通顺一般都会采纳。

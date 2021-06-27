@@ -68,6 +68,9 @@
 * [第八章 进阶篇]()
   * [深入理解类型检查与栈映射桢]()
   * [深入理解泛型与泛型方法调用]()
-  * [期待更多...]()
-* [期待更多...]()
+* [字节码实战开源项目](opensourceprojects/README.md)
+  * [实现类Spring框架@Async注解功能的asyncframework](opensourceprojects/asyncframework.md)
+  * [一款轻量级的分布式调用链路追踪Java探针vine](opensourceprojects/vine.md)
+  * [运行时解析json生成class的json-class-generator](opensourceprojects/jcg.md)
+  * [JavaAgent入门级项目Beemite](opensourceprojects/beemite.md)
 
