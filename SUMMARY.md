@@ -17,7 +17,7 @@
   * [解析常量池](chapter02/04.md)
   * [解析class文件的访问标志](chapter02/05.md)
   * [解析this与super符号引用](chapter02/06.md)
-  * [解析实现的接口](chapter02/07.md)
+  * [解析接口表](chapter02/07.md)
   * [解析字段表](chapter02/08.md)
   * [解析方法表](chapter02/09.md)
   * [解析class文件的属性表](chapter02/10.md)
