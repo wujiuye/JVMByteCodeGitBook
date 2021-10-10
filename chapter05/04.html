@@ -1,0 +1,1370 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>创建类并创建方法 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="05.html" />
+    
+    
+    <link rel="prev" href="03.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    《深入浅出JVM字节码》
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../xuyan.html">
+            
+                <a href="../xuyan.html">
+            
+                    
+                    序言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../chapter01/">
+            
+                <a href="../chapter01/">
+            
+                    
+                    第一章 Java虚拟机基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../chapter01/01.html">
+            
+                <a href="../chapter01/01.html">
+            
+                    
+                    为什么会出现StackOverflowError
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../chapter01/02.html">
+            
+                <a href="../chapter01/02.html">
+            
+                    
+                    JVM运行时内存结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../chapter01/03.html">
+            
+                <a href="../chapter01/03.html">
+            
+                    
+                    线程、栈与栈桢
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../chapter01/04.html">
+            
+                <a href="../chapter01/04.html">
+            
+                    
+                    局部变量表与操作数栈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../chapter01/05.html">
+            
+                <a href="../chapter01/05.html">
+            
+                    
+                    基于栈的指令集架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../chapter01/06.html">
+            
+                <a href="../chapter01/06.html">
+            
+                    
+                    本章小结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../chapter02/">
+            
+                <a href="../chapter02/">
+            
+                    
+                    第二章 深入理解Class文件结构
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../chapter02/00.html">
+            
+                <a href="../chapter02/00.html">
+            
+                    
+                    class文件结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../chapter02/01.html">
+            
+                <a href="../chapter02/01.html">
+            
+                    
+                    动手实现class文件结构解析器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../chapter02/02.html">
+            
+                <a href="../chapter02/02.html">
+            
+                    
+                    解析魔数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../chapter02/03.html">
+            
+                <a href="../chapter02/03.html">
+            
+                    
+                    解析版本号
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../chapter02/04.html">
+            
+                <a href="../chapter02/04.html">
+            
+                    
+                    解析常量池
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../chapter02/05.html">
+            
+                <a href="../chapter02/05.html">
+            
+                    
+                    解析class文件的访问标志
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../chapter02/06.html">
+            
+                <a href="../chapter02/06.html">
+            
+                    
+                    解析this与super符号引用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../chapter02/07.html">
+            
+                <a href="../chapter02/07.html">
+            
+                    
+                    解析接口表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../chapter02/08.html">
+            
+                <a href="../chapter02/08.html">
+            
+                    
+                    解析字段表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="../chapter02/09.html">
+            
+                <a href="../chapter02/09.html">
+            
+                    
+                    解析方法表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="../chapter02/10.html">
+            
+                <a href="../chapter02/10.html">
+            
+                    
+                    解析class文件的属性表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="../chapter02/11.html">
+            
+                <a href="../chapter02/11.html">
+            
+                    
+                    解析整个Class文件结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13" data-path="../chapter02/12.html">
+            
+                <a href="../chapter02/12.html">
+            
+                    
+                    属性二次解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.14" data-path="../chapter02/13.html">
+            
+                <a href="../chapter02/13.html">
+            
+                    
+                    本章小结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../chapter03/">
+            
+                <a href="../chapter03/">
+            
+                    
+                    第三章 字节码指令集
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../chapter03/01.html">
+            
+                <a href="../chapter03/01.html">
+            
+                    
+                    从Hello Word出发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../chapter03/02.html">
+            
+                <a href="../chapter03/02.html">
+            
+                    
+                    字段与方法描述符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../chapter03/03.html">
+            
+                <a href="../chapter03/03.html">
+            
+                    
+                    读写局部变量表与操作数栈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../chapter03/04.html">
+            
+                <a href="../chapter03/04.html">
+            
+                    
+                    基于对象的操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../chapter03/05.html">
+            
+                <a href="../chapter03/05.html">
+            
+                    
+                    访问静态字段与静态方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../chapter03/06.html">
+            
+                <a href="../chapter03/06.html">
+            
+                    
+                    调用方法的四条指令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../chapter03/07.html">
+            
+                <a href="../chapter03/07.html">
+            
+                    
+                    不同类型返回值对应的指令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../chapter03/08.html">
+            
+                <a href="../chapter03/08.html">
+            
+                    
+                    创建数组与访问数组元素
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../chapter03/09.html">
+            
+                <a href="../chapter03/09.html">
+            
+                    
+                    条件分支语句的实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../chapter03/10.html">
+            
+                <a href="../chapter03/10.html">
+            
+                    
+                    循环语句的实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="../chapter03/11.html">
+            
+                <a href="../chapter03/11.html">
+            
+                    
+                    异常处理的实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.12" data-path="../chapter03/12.html">
+            
+                <a href="../chapter03/12.html">
+            
+                    
+                    本章小结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../chapter04/">
+            
+                <a href="../chapter04/">
+            
+                    
+                    第四章 深入理解类加载
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../chapter04/01.html">
+            
+                <a href="../chapter04/01.html">
+            
+                    
+                    动态加载类的两种方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../chapter04/02.html">
+            
+                <a href="../chapter04/02.html">
+            
+                    
+                    类加载过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../chapter04/03.html">
+            
+                <a href="../chapter04/03.html">
+            
+                    
+                    双亲委派模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../chapter04/04.html">
+            
+                <a href="../chapter04/04.html">
+            
+                    
+                    自定义类加载器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../chapter04/05.html">
+            
+                <a href="../chapter04/05.html">
+            
+                    
+                    本章小结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    第五章 ASM快速上手
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="01.html">
+            
+                <a href="01.html">
+            
+                    
+                    框架简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="02.html">
+            
+                <a href="02.html">
+            
+                    
+                    访问者模式在ASM框架中的应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="03.html">
+            
+                <a href="03.html">
+            
+                    
+                    在项目中使用ASM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7.4" data-path="04.html">
+            
+                <a href="04.html">
+            
+                    
+                    创建类并创建方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="05.html">
+            
+                <a href="05.html">
+            
+                    
+                    给类添加字段
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="06.html">
+            
+                <a href="06.html">
+            
+                    
+                    改写类并改写方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="07.html">
+            
+                <a href="07.html">
+            
+                    
+                    创建类并实现接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" data-path="08.html">
+            
+                <a href="08.html">
+            
+                    
+                    继承类并重写父类方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9" data-path="09.html">
+            
+                <a href="09.html">
+            
+                    
+                    本章小结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    第六章 实战一：JDK与Cglib动态代理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" >
+            
+                <span>
+            
+                    
+                    JDK动态代理实现原理分析
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" >
+            
+                <span>
+            
+                    
+                    动手实现JDK动态代理
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" >
+            
+                <span>
+            
+                    
+                    Cglib动态代理实现原理分析
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" >
+            
+                <span>
+            
+                    
+                    动手实现Cglib动态代理
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" >
+            
+                <span>
+            
+                    
+                    本章小结
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    第七章 实战二：APM数据采集之探针埋点
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" >
+            
+                <span>
+            
+                    
+                    Instrumentation简介
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" >
+            
+                <span>
+            
+                    
+                    编写Java Agent插件
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" >
+            
+                <span>
+            
+                    
+                    在类加载之前修改类的字节码
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" >
+            
+                <span>
+            
+                    
+                    使用ASM为方法插入埋点
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" >
+            
+                <span>
+            
+                    
+                    在类加载之后修改类的字节码
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" >
+            
+                <span>
+            
+                    
+                    本章小结
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" >
+            
+                <span>
+            
+                    
+                    第八章 进阶篇
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" >
+            
+                <span>
+            
+                    
+                    深入理解类型检查与栈映射桢
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" >
+            
+                <span>
+            
+                    
+                    深入理解泛型与泛型方法调用
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../opensourceprojects/">
+            
+                <a href="../opensourceprojects/">
+            
+                    
+                    字节码实战开源项目
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../opensourceprojects/asyncframework.html">
+            
+                <a href="../opensourceprojects/asyncframework.html">
+            
+                    
+                    实现类Spring框架@Async注解功能的asyncframework
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../opensourceprojects/vine.html">
+            
+                <a href="../opensourceprojects/vine.html">
+            
+                    
+                    一款轻量级的分布式调用链路追踪Java探针vine
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../opensourceprojects/jcg.html">
+            
+                <a href="../opensourceprojects/jcg.html">
+            
+                    
+                    运行时解析json生成class的json-class-generator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../opensourceprojects/beemite.html">
+            
+                <a href="../opensourceprojects/beemite.html">
+            
+                    
+                    JavaAgent入门级项目Beemite
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >创建类并创建方法</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x521B;&#x5EFA;&#x7C7B;&#x5E76;&#x521B;&#x5EFA;&#x65B9;&#x6CD5;">&#x521B;&#x5EFA;&#x7C7B;&#x5E76;&#x521B;&#x5EFA;&#x65B9;&#x6CD5;</h1>
+<p><img src="../qrcode/javaskill_qrcode_01.png" alt="Java&#x827A;&#x672F;"></p>
+<p>ASM&#x4F7F;&#x7528;&#x8BBF;&#x95EE;&#x8005;&#x6A21;&#x5F0F;&#x63D0;&#x4F9B;&#x975E;&#x5E38;&#x4E30;&#x5BCC;&#x7684;API&#x7B80;&#x5316;&#x6211;&#x4EEC;&#x7684;&#x5F00;&#x53D1;&#xFF0C;&#x5982;&#x8BBF;&#x95EE;&#x7C7B;&#x7684;ClassVisitor&#x3001;&#x8BBF;&#x95EE;&#x5B57;&#x6BB5;&#x7684;FieldVisitor&#x3001;&#x8BBF;&#x95EE;&#x65B9;&#x6CD5;&#x7684;MethodVisitor&#x3002;</p>
+<p>&#x5728;&#x4F7F;&#x7528;ASM&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7C7B;&#x4E4B;&#x524D;&#xFF0C;&#x6211;&#x4EEC;&#x5148;&#x8BA4;&#x8BC6;ASM&#x63D0;&#x4F9B;&#x7684;ClassWriter&#x7C7B;&#xFF0C;ClassWriter&#x7EE7;&#x627F;ClassVisitor&#xFF0C;&#x662F;&#x4EE5;&#x5B57;&#x8282;&#x7801;&#x683C;&#x5F0F;&#x751F;&#x6210;&#x7C7B;&#x7684;&#x7C7B;&#x8BBF;&#x95EE;&#x8005;&#x3002;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x8BBF;&#x95EE;&#x8005;&#x53EF;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x7B26;&#x5408;class&#x6587;&#x4EF6;&#x683C;&#x5F0F;&#x7684;&#x5B57;&#x8282;&#x6570;&#x7EC4;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;ClassWriter&#x4ECE;&#x5934;&#x5F00;&#x59CB;&#x751F;&#x6210;&#x4E00;&#x4E2A;Class&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4E0E;ClassReader&#x4E00;&#x8D77;&#x4F7F;&#x7528;&#xFF0C;&#x4EE5;&#x4FEE;&#x6539;&#x73B0;&#x6709;&#x7684;Class&#x751F;&#x6210;&#x65B0;&#x7684;Class&#x3002;</p>
+<p> ClassWriter&#x7684;&#x6784;&#x9020;&#x65B9;&#x6CD5;&#x8981;&#x6C42;&#x4F20;&#x9012;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x5FC5;&#x987B;&#x662F;COMPUTE_FRAMES&#x3001;COMPUTE_MAXS&#x4E2D;&#x7684;0&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-comment">// 0&#x4E2A;</span>
+ClassWriter classWriter = <span class="hljs-keyword">new</span> ClassWriter(<span class="hljs-number">0</span>);
+<span class="hljs-comment">// &#x4E00;&#x4E2A;&#xFF1A;COMPUTE_MAXS</span>
+ClassWriter classWriter = <span class="hljs-keyword">new</span> ClassWriter(ClassWriter.COMPUTE_MAXS);
+<span class="hljs-comment">// &#x4E00;&#x4E2A;&#xFF1A;COMPUTE_FRAMES</span>
+ClassWriter classWriter = <span class="hljs-keyword">new</span> ClassWriter(ClassWriter.COMPUTE_FRAMES);
+<span class="hljs-comment">// &#x591A;&#x4E2A;&#xFF1A;COMPUTE_MAXS&#x548C;COMPUTE_FRAMES</span>
+ClassWriter classWriter = <span class="hljs-keyword">new</span> ClassWriter(ClassWriter.COMPUTE_MAXS | ClassWriter.COMPUTE_FRAMES);
+</code></pre>
+<ul>
+<li>COMPUTE_MAXS&#xFF1A;&#x81EA;&#x52A8;&#x8BA1;&#x7B97;&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x8868;&#x548C;&#x64CD;&#x4F5C;&#x6570;&#x6808;&#x7684;&#x5927;&#x5C0F;&#x3002;&#x4F46;&#x4ECD;&#x7136;&#x9700;&#x8981;&#x8C03;&#x7528;visitMax&#x65B9;&#x6CD5;&#xFF0C;&#x53EA;&#x662F;&#x4F60;&#x53EF;&#x4EE5;&#x4F20;&#x9012;&#x4EFB;&#x610F;&#x53C2;&#x6570;&#xFF0C;ASM&#x4F1A;&#x5FFD;&#x7565;&#x8FD9;&#x4E9B;&#x53C2;&#x6570;&#xFF0C;&#x5E76;&#x91CD;&#x65B0;&#x8BA1;&#x7B97;&#x5927;&#x5C0F;&#x3002;</li>
+<li>COMPUTE_FRAMES&#xFF1A;&#x81EA;&#x52A8;&#x8BA1;&#x7B97;&#x65B9;&#x6CD5;&#x7684;&#x6808;&#x6620;&#x5C04;&#x6862;&#x3002;&#x4E0E;&#x81EA;&#x52A8;&#x8BA1;&#x7B97;&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x8868;&#x548C;&#x64CD;&#x4F5C;&#x6570;&#x6808;&#x7684;&#x5927;&#x5C0F;&#x4E00;&#x6837;&#xFF0C;&#x6211;&#x4EEC;&#x4ECD;&#x7136;&#x9700;&#x8981;&#x8C03;&#x7528;visitFrame&#x65B9;&#x6CD5;&#xFF0C;&#x4F46;&#x53C2;&#x6570;&#x53EF;&#x4EE5;&#x968F;&#x610F;&#x586B;&#x3002;</li>
+</ul>
+<p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;ClassWriter&#x5BF9;&#x8C61;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7B26;&#x5408;class&#x6587;&#x4EF6;&#x7ED3;&#x6784;&#x7684;&#x7A7A;&#x5B57;&#x8282;&#x6570;&#x7EC4;&#xFF0C;&#x4F46;&#x6B64;&#x65F6;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x662F;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x610F;&#x4E49;&#x7684;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x8C03;&#x7528;ClassWriter&#x5BF9;&#x8C61;&#x7684;API&#x4E3A;&#x8BE5;&#x5BF9;&#x8C61;&#x586B;&#x5145;class&#x6587;&#x4EF6;&#x7ED3;&#x6784;&#x7684;&#x5404;&#x9879;&#x5143;&#x7D20;&#x3002;</p>
+<p>ClassWriter&#x7C7B;&#x7684;visit&#x65B9;&#x6CD5;&#x7528;&#x4E8E;&#x8BBE;&#x7F6E;&#x7C7B;&#x7684;class&#x6587;&#x4EF6;&#x7ED3;&#x6784;&#x7248;&#x672C;&#x53F7;&#x3001;&#x7C7B;&#x7684;&#x8BBF;&#x95EE;&#x6807;&#x5FD7;&#x3001;&#x7C7B;&#x7684;&#x540D;&#x79F0;&#x3001;&#x7C7B;&#x7684;&#x7B7E;&#x540D;&#x3001;&#x7236;&#x7C7B;&#x7684;&#x540D;&#x79F0;&#x3001;&#x5B9E;&#x73B0;&#x7684;&#x63A5;&#x53E3;&#x3002;visit&#x65B9;&#x6CD5;&#x7684;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">void</span> <span class="hljs-title">visit</span><span class="hljs-params">(<span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> version,<span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> access,<span class="hljs-keyword">final</span> String name,
+      <span class="hljs-keyword">final</span> String signature,<span class="hljs-keyword">final</span> String superName,<span class="hljs-keyword">final</span> String[] interfaces)</span>
+</span></code></pre>
+<p>visit&#x65B9;&#x6CD5;&#x7684;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</p>
+<ul>
+<li>version&#xFF1A;&#x6307;&#x5B9A;&#x7C7B;&#x6587;&#x4EF6;&#x7ED3;&#x6784;&#x7684;&#x7248;&#x672C;&#x53F7;&#xFF1B;</li>
+<li>access&#xFF1A;&#x6307;&#x5B9A;&#x7C7B;&#x7684;&#x8BBF;&#x95EE;&#x6807;&#x5FD7;&#xFF0C;&#x5982;public&#x3001;final&#x7B49;&#xFF1B;</li>
+<li>name&#xFF1A;&#x6307;&#x5B9A;&#x7C7B;&#x7684;&#x540D;&#x79F0;&#xFF08;&#x5185;&#x90E8;&#x7C7B;&#x540D;&#xFF09;&#xFF0C;&#x5982;&#x201C;java/lang/String&#x201D;&#xFF1B;</li>
+<li>signature&#xFF1A;&#x7C7B;&#x7684;&#x7C7B;&#x578B;&#x7B7E;&#x540D;&#xFF0C;&#x5982;&#x201C;Ljava/lang/String;&#x201D;&#xFF1B;</li>
+<li>superName&#xFF1A;&#x7EE7;&#x627F;&#x7684;&#x7236;&#x7C7B;&#x540D;&#x79F0;&#x3002;&#x9664;Object&#x7C7B;&#x5916;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x7C7B;&#x90FD;&#x5FC5;&#x987B;&#x6709;&#x7236;&#x7C7B;&#xFF1B;</li>
+<li>interfaces&#xFF1A;&#x8BE5;&#x7C7B;&#x9700;&#x8981;&#x5B9E;&#x73B0;&#x7684;&#x63A5;&#x53E3;&#x3002;</li>
+</ul>
+<p>&#x5728;ASM&#x6846;&#x67B6;&#x4E2D;&#xFF0C;&#x6BCF;&#x4E2A;&#x8BBF;&#x95EE;&#x8005;&#x90FD;&#x6709;&#x4E00;&#x4E2A;visitEnd&#x65B9;&#x6CD5;&#xFF0C;&#x5982;ClassVisitor&#x3002;ClassVisitor&#x7684;visitEnd&#x65B9;&#x6CD5;&#x5728;&#x7ED3;&#x675F;&#x65F6;&#x8C03;&#x7528;&#xFF0C;&#x7528;&#x4E8E;&#x901A;&#x77E5;&#x8BBF;&#x95EE;&#x8005;&#xFF0C;&#x7C7B;&#x8BBF;&#x95EE;&#x7ED3;&#x675F;&#x3002;</p>
+<p>&#x73B0;&#x5728;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x4F7F;&#x7528;ClassWriter&#x6765;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7C7B;&#xFF0C;&#x4E00;&#x4E2A;&#x7EE7;&#x627F;&#x81F3;Object&#x7684;&#x7C7B;&#xFF0C;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">UseAsmCreateClass</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> IOException, ClassNotFoundException </span>{
+        String className = <span class="hljs-string">&quot;com.wujiuye.asmbytecode.book.fifth.AsmGenerateClass&quot;</span>;
+        String signature = <span class="hljs-string">&quot;L&quot;</span> + className.replace(<span class="hljs-string">&quot;.&quot;</span>, <span class="hljs-string">&quot;/&quot;</span>) + <span class="hljs-string">&quot;;&quot;</span>;
+        <span class="hljs-comment">// &#x5B57;&#x8282;&#x8BA1;&#x7B97;&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x8868;&#x548C;&#x64CD;&#x4F5C;&#x6570;&#x6808;&#x5927;&#x5C0F;&#x3001;&#x6808;&#x6620;&#x5C04;&#x6862;</span>
+        ClassWriter classWriter = <span class="hljs-keyword">new</span> ClassWriter(<span class="hljs-number">0</span>);
+                <span class="hljs-comment">// &#x7C7B;&#x540D;&#x548C;&#x7236;&#x7C7B;&#x540D;&#x9700;&#x8981;&#x4F7F;&#x7528; &#x201C;/&#x201D;&#x66FF;&#x6362;&#x201C;.&#x201D;&#x3002;&#x8FD9;&#x4E2A;&#x53EF;&#x4EE5;&#x5728;&#x5E38;&#x91CF;&#x6C60;&#x4E2D;&#x627E;&#x5230;&#x7B54;&#x6848;</span>
+        classWriter.visit(Opcodes.V1_8, ACC_PUBLIC,
+                className.replace(<span class="hljs-string">&quot;.&quot;</span>, <span class="hljs-string">&quot;/&quot;</span>),
+                signature,
+                Object.class.getName().replace(<span class="hljs-string">&quot;.&quot;</span>, <span class="hljs-string">&quot;/&quot;</span>),
+                <span class="hljs-keyword">null</span>);
+        classWriter.visitEnd();
+        <span class="hljs-comment">// &#x83B7;&#x53D6;&#x751F;&#x6210;&#x7684;class&#x7684;&#x5B57;&#x8282;&#x6570;&#x7EC4;</span>
+        <span class="hljs-keyword">byte</span>[] byteCode = classWriter.toByteArray();
+        ByteCodeUtils.savaToFile(className, byteCode);
+    }
+
+}
+</code></pre>
+<p>&#x7531;&#x4E8E;ClassWriter&#x5BF9;&#x8C61;&#x751F;&#x6210;&#x7684;&#x662F;&#x7C7B;&#x7684;&#x5B57;&#x8282;&#x6570;&#x7EC4;&#xFF0C;&#x56E0;&#x6B64;&#xFF0C;&#x4E3A;&#x9A8C;&#x8BC1;&#x6211;&#x4EEC;&#x6240;&#x5199;&#x7684;&#x4EE3;&#x7801;&#x751F;&#x6210;&#x7684;class&#x5B57;&#x8282;&#x7801;&#x662F;&#x6B63;&#x786E;&#x7684;&#xFF0C;&#x6211;&#x4EEC;&#x8FD8;&#x9700;&#x8981;&#x5C06;ClassWriter&#x5BF9;&#x8C61;&#x751F;&#x6210;&#x7684;&#x5B57;&#x8282;&#x6570;&#x7EC4;&#x8F93;&#x51FA;&#x5230;&#x4E00;&#x4E2A;class&#x6587;&#x4EF6;&#x3002;&#x5728;&#x6848;&#x4F8B;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x4F7F;&#x7528;ByteCodeUtils&#x7684;savaToFile&#x65B9;&#x6CD5;&#x5C06;class&#x5B57;&#x8282;&#x6570;&#x7EC4;&#x8F93;&#x51FA;&#x5230;&#x6587;&#x4EF6;&#xFF0C;savaToFile&#x65B9;&#x6CD5;&#x7684;&#x5B9E;&#x73B0;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">savaToFile</span><span class="hljs-params">(String className, <span class="hljs-keyword">byte</span>[] byteCode)</span> <span class="hljs-keyword">throws</span> IOException </span>{
+        File file = <span class="hljs-keyword">new</span> File(<span class="hljs-string">&quot;/tmp/&quot;</span> + className + <span class="hljs-string">&quot;.class&quot;</span>);
+        <span class="hljs-keyword">if</span> ((!file.exists() || file.delete()) &amp;&amp; file.createNewFile()) {
+            <span class="hljs-keyword">try</span> (FileOutputStream fos = <span class="hljs-keyword">new</span> FileOutputStream(file)) {
+                fos.write(byteCode);
+            }
+        }
+}
+</code></pre>
+<p>&#x4F7F;&#x7528;IDEA&#x6253;&#x5F00;&#x8FD9;&#x4E2A;class&#x6587;&#x4EF6;&#xFF0C;&#x67E5;&#x770B;class&#x6587;&#x4EF6;&#x53CD;&#x7F16;&#x8BD1;&#x540E;&#x7684;java&#x4EE3;&#x7801;&#xFF0C;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#x3002;</p>
+<p><img src="images/chapter05-04-01.png" alt="image-20211010152909889"></p>
+<p>IDEA&#x80FD;&#x591F;&#x5C06;&#x5176;&#x53CD;&#x7F16;&#x8BD1;&#x4E3A;java&#x4EE3;&#x7801;&#xFF0C;&#x8BF4;&#x660E;&#x8BE5;class&#x6587;&#x4EF6;&#x7684;&#x7ED3;&#x6784;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x95EE;&#x9898;&#xFF0C;&#x4F46;&#x5E76;&#x4E0D;&#x80FD;&#x8BF4;&#x660E;&#x8FD9;&#x4E2A;&#x7C7B;&#x80FD;&#x4F7F;&#x7528;&#x3002;&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x5E76;&#x6CA1;&#x6709;&#x751F;&#x6210;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;&#x521D;&#x59CB;&#x5316;&#x65B9;&#x6CD5;<code>&lt;init&gt;</code>&#xFF0C;ASM&#x4E0D;&#x662F;&#x7F16;&#x8BD1;&#x5668;&#xFF0C;&#x4E0D;&#x4F1A;&#x81EA;&#x52A8;&#x5E2E;&#x6211;&#x4EEC;&#x751F;&#x6210;<code>&lt;init&gt;</code>&#x65B9;&#x6CD5;&#x3002;&#x5982;&#x679C;&#x73B0;&#x5728;&#x4F7F;&#x7528;ClassLoader&#x6765;&#x52A0;&#x8F7D;&#x8FD9;&#x4E2A;&#x7C7B;&#x5E76;&#x901A;&#x8FC7;&#x53CD;&#x5C04;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5B9E;&#x4F8B;&#xFF0C;&#x90A3;&#x4E48;&#x5C06;&#x4F1A;&#x5F97;&#x5230;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#x7684;&#x9519;&#x8BEF;&#x3002;</p>
+<p><img src="images/chapter05-04-02.png" alt="image-20211010153109069"></p>
+<p>&#x56E0;&#x6B64;&#xFF0C;&#x5728;&#x521B;&#x5EFA;&#x7C7B;&#x4E4B;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x5FC5;&#x987B;&#x8981;&#x4E3A;&#x7C7B;&#x6DFB;&#x52A0;&#x5B9E;&#x4F8B;&#x521D;&#x59CB;&#x5316;&#x65B9;&#x6CD5;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;Java&#x7C7B;&#x7684;&#x6784;&#x9020;&#x65B9;&#x6CD5;&#x3002;&#x5E76;&#x4E14;&#x9700;&#x8981;&#x5728;&#x5B9E;&#x4F8B;&#x521D;&#x59CB;&#x5316;&#x65B9;&#x6CD5;&#x4E2D;&#x8C03;&#x7528;&#x7236;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;&#x521D;&#x59CB;&#x5316;&#x65B9;&#x6CD5;&#x3002;</p>
+<p> &#x4E3A;&#x7C7B;&#x751F;&#x6210;&#x65B9;&#x6CD5;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x7528;&#x5230;ClassWriter&#x7C7B;&#x7684;visitMethod&#x65B9;&#x6CD5;&#xFF0C;visitMethod&#x65B9;&#x6CD5;&#x7684;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">final</span> MethodVisitor <span class="hljs-title">visitMethod</span><span class="hljs-params">(<span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> access,<span class="hljs-keyword">final</span> String name,
+                  <span class="hljs-keyword">final</span> String descriptor,<span class="hljs-keyword">final</span> String signature,<span class="hljs-keyword">final</span> String[] exceptions)</span>
+</span></code></pre>
+<p>visitMethod&#x65B9;&#x6CD5;&#x7684;&#x5404;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</p>
+<ul>
+<li>access&#xFF1A;&#x65B9;&#x6CD5;&#x7684;&#x8BBF;&#x95EE;&#x6807;&#x5FD7;&#xFF0C;&#x5982;public&#x3001;static&#x7B49;&#xFF1B;</li>
+<li>name&#xFF1A;&#x65B9;&#x6CD5;&#x7684;&#x540D;&#x79F0;&#xFF08;&#x5185;&#x90E8;&#x7C7B;&#x540D;&#xFF09;&#xFF1B;</li>
+<li>descriptor&#xFF1A;&#x65B9;&#x6CD5;&#x7684;&#x63CF;&#x8FF0;&#x7B26;&#xFF0C;&#x5982;&#x201C;()V&#x201D;&#xFF1B;</li>
+<li>signature&#xFF1A;&#x65B9;&#x6CD5;&#x7B7E;&#x540D;&#xFF0C;&#x53EF;&#x4EE5;&#x4E3A;&#x7A7A;&#xFF1B;</li>
+<li>exceptions&#xFF1A;&#x8BE5;&#x65B9;&#x6CD5;&#x53EF;&#x80FD;&#x629B;&#x51FA;&#x7684;&#x53D7;&#x68C0;&#x5F02;&#x5E38;&#x7684;&#x7C7B;&#x578B;&#x5185;&#x90E8;&#x540D;&#x79F0;&#xFF0C;&#x53EF;&#x4EE5;&#x4E3A;&#x7A7A;&#x3002;</li>
+</ul>
+<p>&#x8C03;&#x7528;ClassWriter&#x7684;visitMethod&#x65B9;&#x6CD5;&#x4F1A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;MethodWriter&#xFF0C;MethodWriter&#x7684;&#x6784;&#x9020;&#x65B9;&#x6CD5;&#x4E2D;&#x4F1A;&#x5C06;&#x65B9;&#x6CD5;&#x540D;&#x3001;&#x65B9;&#x6CD5;&#x63CF;&#x8FF0;&#x7B26;&#x3001;&#x65B9;&#x6CD5;&#x7B7E;&#x540D;&#x751F;&#x6210;CONSTANT_Utf8_info&#x5E38;&#x91CF;&#xFF0C;&#x5E76;&#x6DFB;&#x52A0;&#x5230;&#x5E38;&#x91CF;&#x6C60;&#x4E2D;&#x3002;&#x5982;&#x679C;exceptions&#x53C2;&#x6570;&#x4E0D;&#x4E3A;&#x7A7A;&#xFF0C;&#x4F1A;&#x4E3A;&#x5F02;&#x5E38;&#x8868;&#x7684;&#x6BCF;&#x4E2A;&#x5F02;&#x5E38;&#x7C7B;&#x578B;&#x751F;&#x6210;&#x4E00;&#x4E2A;CONSTANT_Class_info&#x5E38;&#x91CF;&#xFF0C;&#x5E76;&#x6DFB;&#x52A0;&#x5230;&#x5E38;&#x91CF;&#x6C60;&#x4E2D;&#x3002;</p>
+<p>&#x4F7F;&#x7528;visitMethod&#x65B9;&#x6CD5;&#x4E3A;&#x7C7B;&#x751F;&#x6210;&#x4E00;&#x4E2A;<code>&lt;init&gt;</code>&#x65B9;&#x6CD5;&#xFF0C;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#x3002;</p>
+<pre><code class="lang-java">MethodVisitor methodVisitor = classWriter.visitMethod(ACC_PUBLIC,<span class="hljs-string">&quot;&lt;init&gt;&quot;</span>,<span class="hljs-string">&quot;()V&quot;</span>,<span class="hljs-keyword">null</span>,<span class="hljs-keyword">null</span>);
+methodVisitor.visitEnd();
+</code></pre>
+<p>visitMethod&#x65B9;&#x6CD5;&#x4F1A;&#x8FD4;&#x56DE;&#x8BE5;&#x65B9;&#x6CD5;&#x7684;&#x8BBF;&#x95EE;&#x8005;&#xFF1A;MethodVisitor&#x5B9E;&#x4F8B;&#x3002;&#x6211;&#x4EEC;&#x5728;&#x4F7F;&#x7528;&#x5B8C;MethodVisitor &#x4E4B;&#x540E;&#xFF0C;&#x4E0E;ClassVisitor&#x4E00;&#x6837;&#xFF0C;&#x9700;&#x8981;&#x8C03;&#x7528;&#x5B9E;&#x4F8B;&#x7684;visitEnd&#x65B9;&#x6CD5;&#x3002;&#x53EF;&#x4EE5;&#x8BF4;&#xFF0C;&#x4F7F;&#x7528;ASM&#x63D0;&#x4F9B;&#x7684;&#x6BCF;&#x4E2A;&#x8BBF;&#x95EE;&#x8005;&#xFF0C;&#x90FD;&#x9700;&#x8981;&#x8C03;&#x7528;&#x4E00;&#x6B21;&#x5B9E;&#x4F8B;&#x7684;visitEnd&#x65B9;&#x6CD5;&#xFF0C;&#x4E00;&#x822C;&#x7684;&#x4F7F;&#x7528;&#x573A;&#x666F;&#x4E0B;&#xFF0C;&#x4E0D;&#x8C03;&#x7528;visitEnd&#x65B9;&#x6CD5;&#x4E5F;&#x4E0D;&#x4F1A;&#x6709;&#x4EFB;&#x4F55;&#x95EE;&#x9898;&#xFF0C;&#x56E0;&#x4E3A;&#x8FD9;&#x4E9B;visitEnd&#x65B9;&#x6CD5;&#x90FD;&#x662F;&#x7A7A;&#x5B9E;&#x73B0;&#xFF0C;&#x4EC0;&#x4E48;&#x4E8B;&#x60C5;&#x4E5F;&#x4E0D;&#x505A;&#x3002;</p>
+<p>&#x8C03;&#x7528;visitMethod&#x65B9;&#x6CD5;&#x4EC5;&#x4EC5;&#x53EA;&#x662F;&#x4E3A;&#x7C7B;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#xFF0C;&#x5982;&#x679C;&#x65B9;&#x6CD5;&#x7684;&#x8BBF;&#x95EE;&#x6807;&#x5FD7;&#x6CA1;&#x6709;ACC_NATIVE&#x6216;ACC_ABSTRACT&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x65B9;&#x6CD5;&#x4E0D;&#x662F;native&#x65B9;&#x6CD5;&#x6216;&#x8005;&#x62BD;&#x8C61;&#x65B9;&#x6CD5;&#xFF0C;&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x8FD8;&#x9700;&#x8981;&#x7EE7;&#x7EED;&#x4E3A;&#x65B9;&#x6CD5;&#x6DFB;&#x52A0;Code&#x5C5E;&#x6027;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x5148;&#x6765;&#x4E86;&#x89E3;MethodVisitor&#x63A5;&#x53E3;&#x5B9A;&#x4E49;&#x7684;&#x51E0;&#x4E2A;&#x5E38;&#x7528;API&#xFF1A;</p>
+<ul>
+<li>visitCode&#xFF1A;&#x8BBF;&#x95EE;&#x65B9;&#x6CD5;&#x7684;Code&#x5C5E;&#x6027;&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;&#x4E5F;&#x662F;&#x4E00;&#x4E2A;&#x7A7A;&#x65B9;&#x6CD5;&#xFF0C;&#x4EC0;&#x4E48;&#x4E8B;&#x60C5;&#x4E5F;&#x4E0D;&#x505A;&#xFF1B;</li>
+<li>visitMaxs&#xFF1A;&#x7528;&#x4E8E;&#x8BBE;&#x7F6E;&#x65B9;&#x6CD5;&#x7684;&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x8868;&#x4E0E;&#x64CD;&#x4F5C;&#x6570;&#x6808;&#x7684;&#x5927;&#x5C0F;&#xFF1B;</li>
+</ul>
+<p>MethodVisitor&#x63A5;&#x53E3;&#x63D0;&#x4F9B;&#x7684;&#x7F16;&#x5199;&#x5B57;&#x8282;&#x7801;&#x6307;&#x4EE4;&#x76F8;&#x5173;&#x7684;API&#xFF1A;</p>
+<ul>
+<li>visitInsn&#xFF1A;&#x5F80;Code&#x5C5E;&#x6027;&#x7684;code&#x6570;&#x7EC4;&#x4E2D;&#x6DFB;&#x52A0;&#x4E00;&#x6761;&#x65E0;&#x64CD;&#x4F5C;&#x6570;&#x7684;&#x5B57;&#x8282;&#x7801;&#x6307;&#x4EE4;&#xFF0C;&#x5982;dup&#x6307;&#x4EE4;&#x3001;aload_0&#x6307;&#x4EE4;&#x7B49;&#xFF1B;</li>
+<li>visitVarInsn&#xFF1A;&#x5F80;Code&#x5C5E;&#x6027;&#x7684;code&#x6570;&#x7EC4;&#x4E2D;&#x6DFB;&#x52A0;&#x4E00;&#x6761;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x64CD;&#x4F5C;&#x6570;&#x7684;&#x5B57;&#x8282;&#x7801;&#x6307;&#x4EE4;&#xFF0C;&#x5982;aload&#x6307;&#x4EE4;&#xFF1B;</li>
+<li>visitFieldInsn&#xFF1A;&#x5F80;Code&#x5C5E;&#x6027;&#x7684;code&#x6570;&#x7EC4;&#x4E2D;&#x6DFB;&#x52A0;&#x4E00;&#x6761;&#x8BBF;&#x95EE;&#x5B57;&#x6BB5;&#x7684;&#x5B57;&#x8282;&#x7801;&#x6307;&#x4EE4;&#xFF0C;&#x7528;&#x4E8E;&#x6DFB;&#x52A0;putfield&#x3001;getfield&#x3001;putstatic&#x3001;getstatic&#x6307;&#x4EE4;&#xFF1B;</li>
+<li>visitTypeInsn&#xFF1A;&#x5F80;Code&#x5C5E;&#x6027;&#x7684;code&#x6570;&#x7EC4;&#x4E2D;&#x6DFB;&#x52A0;&#x4E00;&#x6761;&#x64CD;&#x4F5C;&#x6570;&#x4E3A;&#x5E38;&#x91CF;&#x6C60;&#x4E2D;&#x67D0;&#x4E2A;CONSTANT_Class_info&#x5E38;&#x91CF;&#x7684;&#x7D22;&#x5F15;&#x7684;&#x5B57;&#x8282;&#x7801;&#x6307;&#x4EE4;&#xFF0C;&#x5982;new&#x6307;&#x4EE4;&#xFF1B;</li>
+<li>visitMethodInsn&#xFF1A;&#x5F80;Code&#x5C5E;&#x6027;&#x7684;code&#x6570;&#x7EC4;&#x4E2D;&#x6DFB;&#x52A0;&#x4E00;&#x6761;&#x8C03;&#x7528;&#x65B9;&#x6CD5;&#x7684;&#x5B57;&#x8282;&#x7801;&#x6307;&#x4EE4;&#xFF0C;&#x5982;invokevirtual&#x6307;&#x4EE4;&#x3002;</li>
+</ul>
+<p>&#x8FD9;&#x4E9B;API&#x7B80;&#x5316;&#x4E86;&#x6211;&#x4EEC;&#x64CD;&#x4F5C;&#x5B57;&#x8282;&#x7801;&#x7684;&#x96BE;&#x5EA6;&#xFF0C;&#x5982;&#x4F7F;&#x7528;visitTypeInsn&#x751F;&#x6210;&#x4E00;&#x6761;new&#x6307;&#x4EE4;&#xFF0C;&#x6211;&#x4EEC;&#x4E0D;&#x9700;&#x8981;&#x77E5;&#x9053;new&#x6307;&#x4EE4;&#x9700;&#x8981;&#x7684;&#x64CD;&#x4F5C;&#x6570;&#x662F;&#x591A;&#x5C11;&#xFF0C;&#x7528;&#x5230;&#x7684;&#x5E38;&#x91CF;&#x4E5F;&#x4E0D;&#x9700;&#x8981;&#x53BB;&#x521B;&#x5EFA;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x4F20;&#x9012;&#x7C7B;&#x7684;&#x5185;&#x90E8;&#x7C7B;&#x578B;&#x540D;&#x79F0;&#xFF0C;&#x5373;&#x4F7F;&#x7528;&#x2018;/&#x2019;&#x7B26;&#x53F7;&#x66FF;&#x4EE3;&#x2018;.&#x2019;&#x7B26;&#x53F7;&#x7684;&#x7C7B;&#x540D;&#x3002;</p>
+<p>visitMethodInsn&#x65B9;&#x6CD5;&#x4F1A;&#x4E3A;&#x6211;&#x4EEC;&#x751F;&#x6210;&#x5BF9;&#x5E94;&#x7684;&#x65B9;&#x6CD5;&#x7B26;&#x53F7;&#x5F15;&#x7528;&#x5E38;&#x91CF;&#xFF1A;CONSTANT_Methodref_info&#x3002;visitMethodInsn&#x65B9;&#x6CD5;&#x7684;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">visitMethodInsn</span><span class="hljs-params">(<span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> opcode,<span class="hljs-keyword">final</span> String owner,<span class="hljs-keyword">final</span> String name,   <span class="hljs-keyword">final</span> String descriptor,<span class="hljs-keyword">final</span> <span class="hljs-keyword">boolean</span> isInterface)</span>
+</span></code></pre>
+<p>visitMethodInsn&#x65B9;&#x6CD5;&#x7684;&#x5404;&#x53C2;&#x6570;&#x89E3;&#x6790;&#xFF1A;</p>
+<ul>
+<li>opcode&#xFF1A;&#x5B57;&#x8282;&#x7801;&#x6307;&#x4EE4;&#x7684;&#x64CD;&#x4F5C;&#x7801;&#xFF0C;&#x5982;invokesepcial&#x6307;&#x4EE4;&#x7684;&#x64CD;&#x4F5C;&#x7801;&#x5341;&#x8FDB;&#x5236;&#x7684;&#x503C;&#x4E3A;183&#xFF1B;</li>
+<li>owner&#xFF1A;&#x7C7B;&#x7684;&#x5185;&#x90E8;&#x7C7B;&#x578B;&#x540D;&#x79F0;&#xFF0C;&#x5982;&#x201C;java/lang/Object&#x201D;&#xFF1B;</li>
+<li>name&#xFF1A;&#x65B9;&#x6CD5;&#x540D;&#x79F0;&#xFF0C;&#x5982;&#x201C;<init>&#x201D;&#xFF1B;</init></li>
+<li>descriptor&#xFF1A;&#x65B9;&#x6CD5;&#x63CF;&#x8FF0;&#x7B26;&#xFF0C;&#x5982;&#x201C;()V&#x201D;;</li>
+<li>isInterface&#xFF1A;&#x662F;&#x5426;&#x662F;&#x63A5;&#x53E3;&#xFF0C;&#x4F7F;&#x7528;invokeinterface&#x6307;&#x4EE4;&#x624D;&#x4F20;true&#xFF0C;&#x5176;&#x5B83;&#x90FD;&#x4F20;false&#x3002;</li>
+</ul>
+<p>&#x73B0;&#x5728;&#xFF0C;&#x6211;&#x4EEC;&#x4F7F;&#x7528;MethodVisitor&#x4E3A;&#x65B0;&#x589E;&#x7684;<code>&lt;init&gt;</code>&#x65B9;&#x6CD5;&#x751F;&#x6210;&#x65B9;&#x6CD5;&#x4F53;&#xFF0C;&#x5373;&#x4E3A;<code>&lt;init&gt;</code>&#x65B9;&#x6CD5;&#x751F;&#x6210;&#x8C03;&#x7528;&#x7236;&#x7C7B;<code>&lt;init&gt;</code>&#x65B9;&#x6CD5;&#x7684;&#x5B57;&#x8282;&#x7801;&#x6307;&#x4EE4;&#xFF0C;&#x5E76;&#x8BBE;&#x7F6E;&#x8BE5;&#x65B9;&#x6CD5;&#x7684;&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x8868;&#x4EE5;&#x53CA;&#x64CD;&#x4F5C;&#x6570;&#x6808;&#x7684;&#x5927;&#x5C0F;&#x3002;&#x5B9E;&#x73B0;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">generateMethod</span><span class="hljs-params">(ClassWriter classWriter)</span></span>{
+        MethodVisitor methodVisitor = classWriter.visitMethod(ACC_PUBLIC, <span class="hljs-string">&quot;&lt;init&gt;&quot;</span>, <span class="hljs-string">&quot;()V&quot;</span>, <span class="hljs-keyword">null</span>, <span class="hljs-keyword">null</span>);
+        methodVisitor.visitCode();
+        <span class="hljs-comment">// &#x8C03;&#x7528;&#x7236;&#x7C7B;&#x6784;&#x9020;&#x5668;</span>
+        methodVisitor.visitVarInsn(ALOAD, <span class="hljs-number">0</span>);
+        methodVisitor.visitMethodInsn(INVOKESPECIAL,<span class="hljs-string">&quot;java/lang/Object&quot;</span>,<span class="hljs-string">&quot;&lt;init&gt;&quot;</span>, <span class="hljs-string">&quot;()V&quot;</span>, <span class="hljs-keyword">false</span>);
+        <span class="hljs-comment">// &#x6DFB;&#x52A0;&#x4E00;&#x6761;&#x8FD4;&#x56DE;&#x6307;&#x4EE4;</span>
+        methodVisitor.visitInsn(RETURN);
+        <span class="hljs-comment">// &#x8BBE;&#x7F6E;&#x64CD;&#x4F5C;&#x6570;&#x6808;&#x548C;&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x8868;&#x5927;&#x5C0F;</span>
+        methodVisitor.visitMaxs(<span class="hljs-number">1</span>,<span class="hljs-number">1</span>);
+        methodVisitor.visitEnd();
+}
+</code></pre>
+<p>&#x6B64;&#x65F6;&#x518D;&#x4FEE;&#x6539;&#x4EE3;&#x7801;main&#x65B9;&#x6CD5;&#xFF0C;&#x5728;&#x8C03;&#x7528;ClassWriter&#x5B9E;&#x4F8B;&#x7684;visitEnd&#x65B9;&#x6CD5;&#x4E4B;&#x524D;&#xFF0C;&#x5148;&#x8C03;&#x7528;generateMethod&#x65B9;&#x6CD5;&#xFF0C;&#x4E3A;&#x7C7B;&#x751F;&#x6210;&#x4E00;&#x4E2A;<code>&lt;init&gt;</code>&#x65B9;&#x6CD5;&#x3002;&#x6700;&#x7EC8;&#x751F;&#x6210;&#x7684;Java&#x7C7B;&#x5982;&#x4E0B;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AsmGenerateClass</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">AsmGenerateClass</span><span class="hljs-params">()</span> </span>{
+    }
+}
+</code></pre>
+<hr>
+<p><font color="#666666">&#x53D1;&#x5E03;&#x4E8E;&#xFF1A;2021 &#x5E74; 10 &#x6708; 10 &#x65E5;</font><br><font color="#666666">&#x4F5C;&#x8005;: &#x5434;&#x5C31;&#x4E1A;</font><br><font color="#666666">&#x94FE;&#x63A5;: <a href="https://wujiuye.gitbook.io/jvmbytecode" target="_blank">https://wujiuye.gitbook.io/jvmbytecode</a></font><br><font color="#666666">&#x6765;&#x6E90;: GitBook&#x5F00;&#x6E90;&#x7535;&#x5B50;&#x4E66;&#x300A;&#x6DF1;&#x5165;&#x6D45;&#x51FA;JVM&#x5B57;&#x8282;&#x7801;&#x300B;&#xFF08;&#x300A;Java&#x865A;&#x62DF;&#x673A;&#x5B57;&#x8282;&#x7801;&#x4ECE;&#x5165;&#x95E8;&#x5230;&#x5B9E;&#x6218;&#x300B;&#x7684;&#x7B2C;&#x4E8C;&#x7248;&#xFF09;&#xFF0C;&#x672A;&#x7ECF;&#x4F5C;&#x8005;&#x8BB8;&#x53EF;&#xFF0C;&#x7981;&#x6B62;&#x8F6C;&#x8F7D;!</font><br></p>
+<p><img src="../qrcode/javaskill_qrcode_02.png" alt="Java&#x827A;&#x672F;"></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="03.html" class="navigation navigation-prev " aria-label="Previous page: 在项目中使用ASM">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="05.html" class="navigation navigation-next " aria-label="Next page: 给类添加字段">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"创建类并创建方法","level":"1.7.4","depth":2,"next":{"title":"给类添加字段","level":"1.7.5","depth":2,"path":"chapter05/05.md","ref":"chapter05/05.md","articles":[]},"previous":{"title":"在项目中使用ASM","level":"1.7.3","depth":2,"path":"chapter05/03.md","ref":"chapter05/03.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter05/04.md","mtime":"2021-10-10T07:39:44.887Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-10-10T08:36:40.597Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
