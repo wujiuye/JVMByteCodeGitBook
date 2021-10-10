@@ -46,4 +46,6 @@
 
 [^ 1]:《Java虚拟机规范》是Java领域最重要和最权威的著作之一，Java SE 8版完整且详细的讲解基于Java SE 8的Java虚拟机规范。
 
-![Java艺术](qrcode/javaskill_qrcode_02.png)
+## 打赏作者
+
+<img src="qrcode/wujiuye_dashang.png" alt="wujiuye_dashang" style="zoom:30%;" />

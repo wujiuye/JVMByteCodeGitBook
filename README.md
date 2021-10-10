@@ -24,7 +24,7 @@
 
 ## 关于作者
 
-* 吴就业， 中间件/基础架构研发工程师，“Java艺术”公众号博主，现就职于荔支。
+* 吴就业， 中间件/基础架构研发工程师，“Java艺术”公众号博主，现就职于荔枝集团。
 
 ## 持续更新中
 
@@ -52,7 +52,9 @@
 
 为了方便交流，您可以加入笔者创建的公众号交流群，由于群邀请二维码会过期，因此您可以添加我微信备注“《深入浅出JVM字节码》”，我拉您入群。
 
-![扫码添加作者好友](qrcode/wujiuye_wx_qrcode.jpeg)
+<img src="qrcode/wujiuye_wx_qrcode.jpeg" alt="扫码添加作者好友" style="zoom:80%;" />
 
-![Java艺术](qrcode/javaskill_qrcode_02.png)
+## 打赏作者
+
+<img src="qrcode/wujiuye_dashang.png" alt="wujiuye_dashang" style="zoom:30%;" />
 
