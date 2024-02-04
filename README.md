@@ -8,8 +8,6 @@
 
 * Github链接：https://wujiuye.github.io/JVMByteCodeGitBook/
 
-* GitBook链接：https://wujiuye.gitbook.io/jvmbytecode
-
 ## 为什么选择开源
 
 开源，是为了更好！
