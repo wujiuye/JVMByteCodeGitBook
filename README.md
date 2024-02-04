@@ -1,12 +1,10 @@
 # 《深入浅出JVM字节码》
 
-![Java艺术](qrcode/javaskill_qrcode_01.png)
+![吴就业](qrcode/javaskill_qrcode_01.png)
 
 《Java虚拟机字节码从入门到实战》写于2020年3月，定位是帮助初学者快速入门Java虚拟机字节码。由于这是我写的第一本书，各方面都没什么经验，最终只选择出电子版，目前已上架Kindle中国、京东读书、网易云阅读、当当云阅读等电子书平台。
 
 本书《深入浅出JVM字节码》是[《Java虚拟机字节码从入门到实战》](https://www.amazon.com/Chinese-%E5%90%B4%E5%B0%B1%E4%B8%9A-ebook/dp/B08G8KYVFJ)的第二版，并更名为《深入浅出JVM字节码》。
-
-* 国内站点链接：http://jvmbytecode.wujiuye.cn/
 
 * Github链接：https://wujiuye.github.io/JVMByteCodeGitBook/
 
@@ -24,7 +22,7 @@
 
 ## 关于作者
 
-* 吴就业， 中间件/基础架构研发工程师，“Java艺术”公众号博主，现就职于荔枝集团。
+* 吴就业， 中间件/基础架构研发工程师，“吴就业”公众号博主，现就职于荔枝集团。个人博客网站：[https://www.wujiuye.com/](https://www.wujiuye.com/)。
 
 ## 持续更新中
 
