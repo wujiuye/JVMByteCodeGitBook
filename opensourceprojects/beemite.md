@@ -169,7 +169,7 @@ public class UserServiceImpl implements UserService {
 
 [^1]: https://github.com/wujiuye/beemite
 
-<font color= #666666>发布于：2021 年 06 月 27 日</font><br><font color= #666666>作者: 吴就业</font><br><font color= #666666>链接: https://github.com/wujiuye/beemite<br><font color= #666666>来源: Github开源项目：beemite，未经作者许可，禁止转载!</font><br>
+<font color= #666666>发布于：2021 年 06 月 27 日</font><br><font color= #666666>作者: [吴就业](https://www.wujiuye.com)</font><br><font color= #666666>链接: https://github.com/wujiuye/beemite<br><font color= #666666>来源: Github开源项目：beemite，未经作者许可，禁止转载!</font><br>
 
 ![Java艺术](../qrcode/javaskill_qrcode_02.png)
 

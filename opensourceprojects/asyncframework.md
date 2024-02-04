@@ -374,7 +374,7 @@ Q：因为我之前写组件的时候有需要用到，但又不想为了使用�
 
 `asyncframework`可以取代`spring`的`@Async`使用，只要封装一个`starter`包，依靠`spring`提供的`BeanPostProcess`实现无缝整合。但`spring`都已经提供了，我就不想去造轮子了，`asyncframework`我推荐是在非`spring`项目中使用。 
 
-<font color= #666666>发布于：2021 年 06 月 27 日</font><br><font color= #666666>作者: 吴就业</font><br><font color= #666666>链接:https://mp.weixin.qq.com/s/PHsUNpvo6UQT5M1o2ZhWjQ</font><br><font color= #666666>来源: 微信公众号“Java艺术”（《笔者开源的asyncframework框架是如何实现类Spring框架@Async注解功能的》），未经作者许可，禁止转载!</font><br>
+<font color= #666666>发布于：2021 年 06 月 27 日</font><br><font color= #666666>作者: [吴就业](https://www.wujiuye.com)</font><br><font color= #666666>链接:https://mp.weixin.qq.com/s/PHsUNpvo6UQT5M1o2ZhWjQ</font><br><font color= #666666>来源: 微信公众号“Java艺术”（《笔者开源的asyncframework框架是如何实现类Spring框架@Async注解功能的》），未经作者许可，禁止转载!</font><br>
 
 ![Java艺术](../qrcode/javaskill_qrcode_02.png)
 
