@@ -374,5 +374,5 @@ Q：因为我之前写组件的时候有需要用到，但又不想为了使用�
 
 ---
 
-<font color= #666666>发布于：2021 年 06 月 27 日</font><br><font color= #666666>作者: [吴就业](https://www.wujiuye.com)</font><br><font color= #666666>GitHub链接: https://github.com/wujiuye/asyncframework</font><br><font color= #666666>博客链接:https://www.wujiuye.com/ebook/JVMByteCodeGitBook/chapter/opensourceprojects_asyncframework.md</font><br><font color= #666666>未经作者许可，禁止转载!</font><br>
+发布于：2021 年 06 月 27 日<br>作者: [吴就业](https://www.wujiuye.com)<br>GitHub链接: https://github.com/wujiuye/asyncframework<br>博客链接:https://www.wujiuye.com/ebook/JVMByteCodeGitBook/chapter/opensourceprojects_asyncframework.md<br>未经作者许可，禁止转载!<br>
 
