@@ -1,7 +1,5 @@
 # 运行时解析json生成class的json-class-generator
 
-![Java艺术](../qrcode/javaskill_qrcode_01.png)
-
 `JCG`(`json-class-generator`)[^1]是一个可用于运行时根据`json`生成`class`的工具，可能使用场景不多。由于是运行时生成的`class`，所以生成的`class`也只能通过反射去使用。
 
 ## 技术栈
@@ -286,7 +284,5 @@ public class JsonToClassTest {
 
 [^1]: https://github.com/wujiuye/json-class-generator
 
-<font color= #666666>发布于：2021 年 06 月 27 日</font><br><font color= #666666>作者: [吴就业](https://www.wujiuye.com)</font><br><font color= #666666>链接: https://github.com/wujiuye/json-class-generator</font><br><font color= #666666>来源: Github开源项目：json-class-generator，未经作者许可，禁止转载!</font><br>
-
-![Java艺术](../qrcode/javaskill_qrcode_02.png)
+<font color= #666666>发布于：2021 年 06 月 27 日</font><br><font color= #666666>作者: [吴就业](https://www.wujiuye.com)</font><br><font color= #666666>GitHub链接: https://github.com/wujiuye/json-class-generator</font><br><font color= #666666>博客链接: https://www.wujiuye.com/ebook/JVMByteCodeGitBook/chapter/opensourceprojects_json-class-generator.md</font><br><font color= #666666>来源: Github开源项目：json-class-generator，未经作者许可，禁止转载!</font><br>
 

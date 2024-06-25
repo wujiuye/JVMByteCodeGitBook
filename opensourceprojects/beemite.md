@@ -1,7 +1,5 @@
 # JavaAgent入门级项目Beemite
 
-![Java艺术](../qrcode/javaskill_qrcode_01.png)
-
 Beemite[^1]是笔者刚开始学习JVM字节码时的一个实战Demo级项目，该项目采用`javaagent`+`asm`动态字节码插桩实现业务代码调用链监控，适合新手入门学习。
 
 Beemite分两个版本：
@@ -169,7 +167,5 @@ public class UserServiceImpl implements UserService {
 
 [^1]: https://github.com/wujiuye/beemite
 
-<font color= #666666>发布于：2021 年 06 月 27 日</font><br><font color= #666666>作者: [吴就业](https://www.wujiuye.com)</font><br><font color= #666666>链接: https://github.com/wujiuye/beemite<br><font color= #666666>来源: Github开源项目：beemite，未经作者许可，禁止转载!</font><br>
-
-![Java艺术](../qrcode/javaskill_qrcode_02.png)
+<font color= #666666>发布于：2021 年 06 月 27 日</font><br><font color= #666666>作者: [吴就业](https://www.wujiuye.com)</font><br><font color= #666666>GitHub链接: https://github.com/wujiuye/beemite</font><br><font color= #666666>博客链接: https://www.wujiuye.com/ebook/JVMByteCodeGitBook/chapter/opensourceprojects_vine.md</font><br><font color= #666666>来源: Github开源项目：beemite，未经作者许可，禁止转载!</font><br>
 

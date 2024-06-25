@@ -1,12 +1,11 @@
 # 《深入浅出JVM字节码》
 
-![吴就业](qrcode/javaskill_qrcode_01.png)
-
 《Java虚拟机字节码从入门到实战》写于2020年3月，定位是帮助初学者快速入门Java虚拟机字节码。由于这是我写的第一本书，各方面都没什么经验，最终只选择出电子版，目前已上架Kindle中国、京东读书、网易云阅读、当当云阅读等电子书平台。
 
 本书《深入浅出JVM字节码》是[《Java虚拟机字节码从入门到实战》](https://www.amazon.com/Chinese-%E5%90%B4%E5%B0%B1%E4%B8%9A-ebook/dp/B08G8KYVFJ)的第二版，并更名为《深入浅出JVM字节码》。
 
 * Github链接：https://wujiuye.github.io/JVMByteCodeGitBook/
+* 博客网站地址：https://www.wujiuye.com/ebook/JVMByteCodeGitBook/chapter/preface
 
 ## 本书目录
 
@@ -24,7 +23,7 @@
 
 ## 关于作者
 
-* 吴就业， 中间件/基础架构研发工程师，“吴就业”公众号博主，现就职于荔枝集团。个人博客网站：[https://www.wujiuye.com/](https://www.wujiuye.com/)。
+* 吴就业， 中间件/基础架构研发工程师，个人博客网站：[https://www.wujiuye.com/](https://www.wujiuye.com/)。
 
 ## 持续更新中
 
@@ -46,13 +45,7 @@
 * 允许修改章节标题、二级标题、三级标题；
 * 允许修改或重写任意章节内容；
 * 允许添加章节；
-* 提交请带上姓名-邮箱-公司-职位-简介-提交说明；
-
-## 入群
-
-为了方便交流，您可以加入笔者创建的公众号交流群，由于群邀请二维码会过期，因此您可以添加我微信备注“《深入浅出JVM字节码》”，我拉您入群。
-
-<img src="qrcode/wujiuye_wx_qrcode.jpeg" alt="扫码添加作者好友" style="zoom:80%;" />
+* 提交请带上姓名-邮箱-简介-提交说明；
 
 ## 打赏作者
 

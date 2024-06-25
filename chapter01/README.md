@@ -1,6 +1,4 @@
 # 第一章 认识Java虚拟机栈
 
-![Java艺术](../qrcode/javaskill_qrcode_01.png)
-
 本章介绍学习JVM字节码必备的Java虚拟机基础知识，理解Java线程、Java虚拟机栈、栈帧、局部变量表、操作数栈是理解字节码指令的基础。
 

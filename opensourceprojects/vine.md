@@ -1,7 +1,5 @@
 # 一款轻量级的分布式调用链路追踪Java探针vine
 
-![Java艺术](../qrcode/javaskill_qrcode_01.png)
-
 vine[^1]是一款轻量级的分布式调用链路追踪-Java探针。对于同进程内，vine在调用链路入口处创建用于收集日记的单向链表， 调用链路上每经过一个方法都会向链表尾部追加日记，最终在调用链路出口处打印整个调用链路的日记；不同进程间，通过传递事件ID将整条链路串连起来。
 
 * vine目前已经适配OpenFeign、WebMvc框架；
@@ -55,7 +53,5 @@ ENTRYPOINT ["java", "-server", "-XX:+UseG1GC",\
 
 [^1]: https://github.com/wujiuye/vine
 
-<font color= #666666>发布于：2021 年 06 月 27 日</font><br><font color= #666666>作者: [吴就业](https://www.wujiuye.com)</font><br><font color= #666666>链接: https://github.com/wujiuye/vine</font><br><font color= #666666>来源: Github开源项目：vine，未经作者许可，禁止转载!</font><br>
-
-![Java艺术](../qrcode/javaskill_qrcode_02.png)
+<font color= #666666>发布于：2021 年 06 月 27 日</font><br><font color= #666666>作者: [吴就业](https://www.wujiuye.com)</font><br><font color= #666666>GitHub链接: https://github.com/wujiuye/vine</font><br><font color= #666666>博客链接: https://www.wujiuye.com/ebook/JVMByteCodeGitBook/chapter/opensourceprojects_beemite.md</font><br><font color= #666666>来源: Github开源项目：vine，未经作者许可，禁止转载!</font><br>
 

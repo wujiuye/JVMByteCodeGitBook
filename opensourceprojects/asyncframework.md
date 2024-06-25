@@ -1,7 +1,5 @@
 # 实现类Spring框架@Async注解功能的asyncframework
 
-![Java艺术](../qrcode/javaskill_qrcode_01.png)
-
 asyncframework是笔者于2019年实现的一个类Spring框架@Async注解功能的异步框架，只需要在接口上添加一个`@AsyncFunction`注解就可让这个方法异步执行，并已发布在笔者的[Github](https://github.com/wujiuye/asyncframework)上。
 
 asyncframework框架的`@AsyncFunction`注解不仅支持用在无返回值的方法上，与Spring框架一样，它同样支持`@AsyncFunction`注解用在有返回值的方法上。
@@ -374,7 +372,7 @@ Q：因为我之前写组件的时候有需要用到，但又不想为了使用�
 
 `asyncframework`可以取代`spring`的`@Async`使用，只要封装一个`starter`包，依靠`spring`提供的`BeanPostProcess`实现无缝整合。但`spring`都已经提供了，我就不想去造轮子了，`asyncframework`我推荐是在非`spring`项目中使用。 
 
-<font color= #666666>发布于：2021 年 06 月 27 日</font><br><font color= #666666>作者: [吴就业](https://www.wujiuye.com)</font><br><font color= #666666>链接:https://mp.weixin.qq.com/s/PHsUNpvo6UQT5M1o2ZhWjQ</font><br><font color= #666666>来源: 微信公众号“Java艺术”（《笔者开源的asyncframework框架是如何实现类Spring框架@Async注解功能的》），未经作者许可，禁止转载!</font><br>
+---
 
-![Java艺术](../qrcode/javaskill_qrcode_02.png)
+<font color= #666666>发布于：2021 年 06 月 27 日</font><br><font color= #666666>作者: [吴就业](https://www.wujiuye.com)</font><br><font color= #666666>GitHub链接: https://github.com/wujiuye/asyncframework</font><br><font color= #666666>博客链接:https://www.wujiuye.com/ebook/JVMByteCodeGitBook/chapter/opensourceprojects_asyncframework.md</font><br><font color= #666666>未经作者许可，禁止转载!</font><br>
 
